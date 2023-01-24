@@ -1,0 +1,60 @@
+<% layout('layouts/boilerplate') %>
+    <div class="row p-3">
+        <h1 class="text-center">Create a new campground!</h1>
+        <div class="col-md-6 offset-md-3">
+            <form action="/campgrounds" method="post" class="form-validate" novalidate enctype="multipart/form-data">
+                <!-- Title -->
+                <div class="my-3">
+                    <label for="title" class="form-label">Title</label>
+                    <input type="text" id="title" name="campground[title]" class="form-control" required>
+                    <div class="invalid-feedback">
+                        Please enter a title.
+                    </div>
+                </div>
+
+                <!-- Location -->
+                <div class="my-3">
+                    <label for="location" class="form-label">Kota dan Provinsi (contoh: Kota Depok, Jawa Barat)</label>
+                    <input type="text" name="campground[location]" id="location" class="form-control" required>
+                    <div class="invalid-feedback">
+                        Please enter a location.
+                    </div>
+                </div>
+
+                <!-- Price -->
+                <div class="my-3">
+                    <label for="price" class="form-label">Price</label>
+                    <div class="input-group">
+                        <span class="input-group-text" id="price-label">$</span>
+                        <input type="text" name="campground[price]" class="form-control" id="price" placeholder="0.00" aria-label="Price" aria-describedby="price-label" required>
+                        <div class="invalid-feedback">
+                            Please enter a price that starts from 0.
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Description -->
+                <div class="my-3">
+                    <label for="description" class="form-label">Description</label>
+                    <textarea name="campground[description]" id="description" class="form-control" rows="" required></textarea>
+                    <div class="invalid-feedback">
+                        Please enter a description.
+                    </div>
+                </div>
+
+                <!-- Image -->
+                <div class="mt-4 custom-file">
+                    <label for="image" class="form-label">Choose Image(s)</label>
+                    <input type="file" name="image" id="image" class="form-control" required multiple>
+                    <span class="custom-file-label text-muted mb-4"></span>
+                    <div class="invalid-feedback">
+                        At least one image must be chosen.
+                    </div>
+                </div>
+
+                <button class="btn btn-primary mt-3 mb-3">Add Campground</button>
+            </form>
+            <a href="/campgrounds" class="btn btn-danger mb-5">Cancel</a>
+        </div>
+    </div>

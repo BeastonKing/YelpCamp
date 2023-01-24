@@ -1,0 +1,11 @@
+#form-images {
+    display: flex;
+}
+
+#form-images img {
+    width: 0.1em;
+    height: 0.1em;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    opacity: 85%;
+}

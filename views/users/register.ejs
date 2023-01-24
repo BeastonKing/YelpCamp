@@ -1,0 +1,46 @@
+<% layout('layouts/boilerplate') %>
+    <div class="container d-flex justify-content-center align-items-center">
+        <div class="row flex-fill">
+            <div class="col-md-6 offset-md-3 col-xl-4 offset-xl-4">
+                <div class="card shadow">
+                    <img src="https://images.unsplash.com/photo-1455763916899-e8b50eca9967?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                        alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Register</h5>
+                        <form action="/register" method="post" class="form-validate" novalidate>
+                            <!-- Username -->
+                            <div class="my-3">
+                                <label for="username" class="form-label">Username</label>
+                                <input type="text" id="username" name="username" class="form-control" required>
+                                <div class="invalid-feedback">
+                                    Please enter a username.
+                                </div>
+                            </div>
+                            <!-- Email -->
+                            <div class="my-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" id="email" name="email" class="form-control" required>
+                                <div class="invalid-feedback">
+                                    Please enter an email.
+                                </div>
+                            </div>
+                            <!-- Password -->
+                            <div class="my-3">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" id="password" name="password" class="form-control" required>
+                                <div class="invalid-feedback">
+                                    Please enter a password.
+                                </div>
+                            </div>
+                            <div class="d-grid">
+                                <button class="btn btn-primary my-3">Register!</button>
+                            </div>
+                        </form>
+                        <div>
+                            <span>Already have an account? <a href="/login">Sign in</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
